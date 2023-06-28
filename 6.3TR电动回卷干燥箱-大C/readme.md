@@ -1,12 +1,11 @@
-
 <!--
  * @Author: Mjf
- * @Date: 2023-06-24 20:10:01
- * @LastEditTime: 2023-06-24 20:19:39
+ * @Date: 2023-06-28 21:41:37
+ * @LastEditTime: 2023-06-28 21:43:08
  * @LastEditors: Win_VScode
  * @Description: 
- * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\6.3TR电动回卷干燥箱\readme.md
+ * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\6.3TR电动回卷干燥箱-大C\readme.md
  * 版权声明暂无
 -->
-### 修订BOM表
-文件包里面的压缩文件自行解压使用，因为文件太大无法上传，所以进行了压缩！
+压缩文件必须解压后进行打印，不要问为什么，GIT不让上传超大文件  
+本次我也不知道更新了啥反正有更新

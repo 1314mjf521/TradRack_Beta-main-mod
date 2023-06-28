@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-06-28 21:50:40
+ * @LastEditTime: 2023-06-29 07:49:38
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -18,5 +18,5 @@
 ###   2023-06-28 新增5.8L米桶支持，更新全套TR兔MOD，更新V3版6.3L米桶文件  
 
 
-###   更新V4版6.3L米桶文件
+
  

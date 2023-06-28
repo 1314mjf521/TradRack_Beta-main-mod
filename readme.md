@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-06-25 11:23:24
+ * @LastEditTime: 2023-06-28 21:50:40
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -15,5 +15,5 @@
 
 ###   2023-06-24 项目初步上传进行更新整理  
 ###   2023-06-25 更新自动回卷料架添加D轴支持  
-###   2023-06-28 新增5.8L米桶支持，更新全套TR兔MOD
+###   2023-06-28 新增5.8L米桶支持，更新全套TR兔MOD，更新V3版6.3L米桶文件
  

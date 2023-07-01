@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-06-29 07:49:38
+ * @LastEditTime: 2023-07-01 20:17:37
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -19,4 +19,4 @@
 
 ###   2023-06-29 大C套件更新，V5版电动回卷+V1版切刀+编码器等 
 
- 
+###   2023-07-01 更新被动回卷料架V2.0.更新全套MODV1.2

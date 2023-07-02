@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-01 20:17:37
+ * @LastEditTime: 2023-07-02 12:59:02
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -10,8 +10,8 @@
 ## 仅仅是MOD文件不做解释全中文注释，有英文啥的不知道是啥随便看吧！  
 中文TR-MOD解释用啥英文不可能得！！  
 全套MOD不负责进行解释，搜集整理不会用别问我都是群友的自己去兔子群下载，高速下载衔接懒得放心情好了我在放！  
-需要合并大佬请注意自行增加中文注释，英文不存在的看不懂！  
-<font color='red'> 注意！！在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M一下文件，所以进行打包！ </font>
+注意！！  
+    在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M一下文件，所以进行打包！
 
 
 ## 更新记录

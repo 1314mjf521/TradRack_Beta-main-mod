@@ -1,0 +1,94 @@
+##愤怒的兔子：Carrot Feeder配置文件，带有｛brd_type｝mcu的配置
+##
+##EASY-BRD安装说明：
+##J6跳线设置：
+##选项1：引脚2-3和4-5，即。[..][..]
+##这是用于无传感器选择器设置。请注意，这将启用选项，禁用“额外”
+##开关，以便刀头传感器（如果使用）必须连接到主mcu
+##选项2：引脚1-2和4-5，即[..].[..]
+##如果你没有使用无传感器选择器。“额外”开关可用于其他用途
+##
+##Fysetc Burrows再培训局设置说明：
+##此板上不需要跳线配置，但已连接12v/24v电源
+##固件安装：
+##>制作菜单配置（rpi2040，无引导加载程序）
+##>制造
+##将卡置于引导加载程序模式：按住“BOOTSEL”；单击“重新设置”；释放“BOOTSEL”
+##>使闪光flash_DEVICE=2e8a:0003
+
+##
+##
+[mcu ercf]
+serial: /dev/serial/by-id/usb-Klipper_rp2040_CB6190905B153D30-if00
+
+
+#####################  挤出电机配置  #############################
+
+[tmc2209 manual_stepper gear_stepper]
+uart_pin: ercf:gpio8 
+uart_address: 0                 # uart 地址
+interpolate: false
+run_current: 0.8			
+hold_current: 0.2			
+sense_resistor: 0.110
+stealthchop_threshold: 0		# 静音阈值
+
+[manual_stepper gear_stepper]
+step_pin: ercf:gpio4
+dir_pin: ercf:gpio10
+enable_pin: !ercf:gpio2
+rotation_distance: 23.0191353		
+gear_ratio: 50:17
+microsteps: 32 				# 细分
+full_steps_per_rotation: 200		# 脉冲数
+velocity: 100
+accel: 1000
+
+#####################  选料电机配置  #############################
+[tmc2209 manual_stepper selector_stepper]
+uart_pin: ercf:gpio8
+uart_address: 1
+run_current: 0.8		
+hold_current: 0.4		
+interpolate: false
+sense_resistor: 0.110
+stealthchop_threshold: 9999	
+#diag_pin: ^{selector_diag_pin}		# Set to MCU pin connected to TMC DIAG pin
+#driver_SGTHRS: 75		# 灵敏度 0~255
+
+[manual_stepper selector_stepper]
+step_pin: ercf:gpio9
+dir_pin: !ercf:gpio18
+enable_pin: !ercf:gpio11
+rotation_distance: 40
+microsteps: 16 			
+full_steps_per_rotation: 200	
+velocity: 500
+accel: 1000
+#endstop_pin: tmc2209_selector_stepper:virtual_endstop	# 虚拟限位
+endstop_pin: ^ercf:gpio19			# 物理传感器
+
+
+##########################  舵机配置  ################################
+[ercf_servo ercf_servo]
+pin: ercf:gpio5
+maximum_servo_angle: 180
+minimum_pulse_width: 0.00085
+maximum_pulse_width: 0.00215
+
+
+##########################  编码器配置  ################################
+[ercf_encoder ercf_encoder]
+encoder_pin: ^ercf:gpio6			# 参考配置EASY-BRD: ^ercf:PA6,    Flytech ERB: ^ercf:gpio22
+encoder_resolution: 1.356852	    #  ERCF_CALIBRATE_ENCODER 校准选料模块出料传感器传感距离（推出500mm耗材反复5次 )
+extruder: extruder		
+
+# 高级设置，但用于自动堵塞检测模式。确保您理解Discord或在Discord上提问
+desired_headroom: 8.0		# ERCF将试图保持的跳动余量（最接近ERCF触发跳动）
+average_samples: 4		 # 上次测量的“阻尼”效应。值越高，表示clog_length的减少速度越慢
+
+[filament_switch_sensor toolhead_sensor]
+pause_on_runout: False		# 必须为 False
+switch_pin: EBBCan: PB5
+
+

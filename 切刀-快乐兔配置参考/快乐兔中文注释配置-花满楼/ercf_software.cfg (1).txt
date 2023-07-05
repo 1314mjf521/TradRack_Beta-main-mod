@@ -1,0 +1,285 @@
+[save_variables]
+filename: /home/klipper/klipper/config/ercf_vars.cfg
+
+########################################################################
+#工具更改宏
+#变量“standalone”选择基于切片器的尖端创建ro尖端形成
+#由下面的_ERCF_FORM_TIP_STANDALONE宏创建。而两人
+#在理论上是相似的，使用基于宏的更容易设置和维护。
+#它还允许逻辑利用清除系统并关闭
+#切片器擦拭塔。
+#0=切片器窗体提示
+#1=宏观成形尖端（或混合，例如SS冲压和宏观成形尖端）
+#######################################################################
+[gcode_macro T0]
+variable_standalone = 0     # 0切片器，1 Happy Hare宏（在切片器中关闭）
+
+gcode:
+    ERCF_CHANGE_TOOL TOOL=0 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T1]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=1 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T2]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=2 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T3]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=3 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T4]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=4 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T5]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=5 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T6]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=6 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T7]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=7 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T8]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=8 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T9]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=9 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T10]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=10 STANDALONE={printer['gcode_macro T0']['standalone']}
+[gcode_macro T11]
+gcode:
+    ERCF_CHANGE_TOOL TOOL=11 STANDALONE={printer['gcode_macro T0']['standalone']}
+# 增加或减少此列表以匹配您的工具数量
+
+########################################################################
+# 简化的命令子集在 Mainsail/Fluidd UI中显示
+########################################################################
+[gcode_macro ERCF__EJECT]
+gcode: ERCF_EJECT
+
+[gcode_macro ERCF__UNLOCK]
+gcode: ERCF_UNLOCK
+
+[gcode_macro ERCF__HOME]
+gcode:
+    {% set TOOL = params.TOOL|default(0)|int %}
+    {% set FORCE_UNLOAD = params.FORCE_UNLOAD|default(0)|int %}
+    ERCF_HOME TOOL={TOOL} FORCE_UNLOAD={FORCE_UNLOAD}
+
+[gcode_macro ERCF__STATUS]
+gcode: ERCF_STATUS
+
+[gcode_macro ERCF__MOTORS_OFF]
+gcode: ERCF_MOTORS_OFF
+
+[gcode_macro ERCF__SERVO_UP]
+gcode: ERCF_SERVO_UP
+
+[gcode_macro ERCF__SERVO_DOWN]
+gcode: ERCF_SERVO_DOWN
+
+[gcode_macro ERCF__SELECT_TOOL]
+gcode:
+    {% set TOOL = params.TOOL|default(0)|int %}
+    ERCF_SELECT TOOL={TOOL}
+
+[gcode_macro ERCF__SELECT_BYPASS]
+gcode: ERCF_SELECT_BYPASS
+
+[gcode_macro ERCF__LOAD_BYPASS]
+gcode: ERCF_LOAD_BYPASS
+
+[gcode_macro ERCF__RECOVER]
+gcode: ERCF_RECOVER
+
+[gcode_macro ERCF__PRELOAD]
+gcode:
+    {% set GATE = params.GATE|default(-1)|int %}
+    ERCF_PRELOAD GATE={GATE}
+
+[gcode_macro ERCF__CHECK_GATES]
+gcode:
+    {% set GATE = params.GATE|default(-1)|int %}
+    ERCF_CHECK_GATES GATE={GATE}
+
+[gcode_macro ERCF_FORM_TIP_STANDALONE]
+gcode:
+    {% set FINAL_EJECT = params.FINAL_EJECT|default(1) %}
+    _ERCF_FORM_TIP_STANDALONE FINAL_EJECT={FINAL_EJECT}
+
+
+# 后面两个是为了向后兼容或测试。。。
+[gcode_macro ERCF_ENCODER_RUNOUT]
+gcode:
+    {% set FORCE_RUNOUT = params.FORCE_RUNOUT|default(0)|int %}
+    _ERCF_ENCODER_RUNOUT FORCE_RUNOUT={FORCE_RUNOUT}
+
+[gcode_macro ERCF_CHANGE_TOOL_STANDALONE]
+gcode:
+    {% set TOOL = params.TOOL|default(0)|int %}
+    ERCF_CHANGE_TOOL TOOL={TOOL} STANDALONE=1
+
+
+########################################################################
+# 独立尖端成型（用于快速调整切片器值）
+########################################################################
+[gcode_macro _ERCF_FORM_TIP_STANDALONE]
+description: Standalone macro that mimics SS process
+
+# 卸载和夯实值-初始移动以形成和成形尖端
+variable_unloading_speed_start: 80     # 此处快速将灯丝与熔化石分离（非常初始的缩回SS使用E-15的距离）
+variable_unloading_speed: 20           # 过快会形成过长的尖端或毛发。慢在这里更好UNLOADING_SPEED_START/COOLING_MOVES似乎是一个好的开始
+variable_ramming_volume: 20            # 以mm3 SS为单位默认值=2、5、9、13、18、23、27。仅用于模拟独立期间的SS冲压
+variable_ss_ramming: 0                 # 使用独立夯实（ramming_VOLUME）或调优时设置为0，1让切片器执行此操作
+
+# 冷却移动值-冷却形成的尖端并与字符串分离
+variable_cooling_tube_position: 35     # 龙ST:35，龙HF:30，蚊子:3，Revo:35，Phaetus Rapido HF:43；从加热器块顶部到散热器顶部测量
+variable_cooling_tube_length: 10       # 龙ST:15，龙HF:10，蚊子:20，Revo:10，Phaetus Rapido HF:22；从喷嘴到加热器块顶部测量
+variable_initial_cooling_speed: 10     # 缓慢固化尖端，如果形成，则冷却线。
+variable_final_cooling_speed: 50       # 高速断绳成型。过快=弹出过程中尖端变形。太慢=字符串太长/没有分隔符
+variable_toolchange_temp: 0            # 如果您想在工具更改期间降低温度，则使用默认值0
+variable_cooling_moves: 4              # 2-4是一个良好的开端
+
+# SkinnyDip值-仅烧掉非常细的头发（这不适用于长尖端整形）
+variable_use_skinnydip: 1              # 调谐此LAST，这仅用于去除非常细的毛发（与长尖端不同）
+variable_skinnydip_distance: 30        # 从Cooling_tube_position下方开始并增加-取决于使用了多少夯击体积
+variable_dip_insertion_speed: 30       # 中等慢速-刚好够融化细毛。太慢会拉起熔化的细丝
+variable_dip_extraction_speed: 70      # 大约2倍的插入速度，防止形成新的毛发
+variable_melt_zone_pause: 0            # 以毫秒为单位-默认值0
+variable_cooling_zone_pause: 0         # i以毫秒为单位-默认值0- 如果您需要在此处进行调整，则可能是Dip Insertion（倾斜插入）过慢
+variable_use_fast_skinnydip: 0         # 在skinnydip移动期间跳过刀头温度更改-默认为0
+
+# 驻车灯丝准备弹出
+# variable_parking_distance: 0          # TODO:SS在最终降温后停车
+
+# 最终弹出-仅用于独立调谐
+variable_final_eject: 0                # 默认为0，在独立调谐过程中启用以弹出灯丝
+
+gcode:
+# 初始化参数
+    {% set UNLOADING_SPEED_START = params.UNLOADING_SPEED_START|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['unloading_speed_start']) %}
+    {% set UNLOADING_SPEED = params.UNLOADING_SPEED|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['unloading_speed']) %}
+    {% set RAMMING_VOLUME = params.RAMMING_VOLUME|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['ramming_volume'], True) %}
+    {% set SS_RAMMING = params.SS_RAMMING|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['ss_ramming'], True) %}
+    {% set COOLING_TUBE_LENGTH = params.COOLING_TUBE_LENGTH|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['cooling_tube_length']) %}
+    {% set COOLING_TUBE_POSITION = params.COOLING_TUBE_POSITION|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['cooling_tube_position']) %}
+    {% set INITIAL_COOLING_SPEED = params.INITIAL_COOLING_SPEED|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['initial_cooling_speed']) %}
+    {% set FINAL_COOLING_SPEED = params.FINAL_COOLING_SPEED|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['final_cooling_speed']) %}
+    {% set COOLING_MOVES = params.COOLING_MOVES|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['cooling_moves']) %}
+    {% set TOOLCHANGE_TEMP = params.TOOLCHANGE_TEMP|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['toolchange_temp'],True) %}
+    {% set USE_SKINNYDIP = params.USE_SKINNYDIP|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['use_skinnydip'], True) %}
+    {% set USE_FAST_SKINNYDIP = params.USE_FAST_SKINNYDIP|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['use_fast_skinnydip'], True) %}
+    {% set SKINNYDIP_DISTANCE = params.SKINNYDIP_DISTANCE|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['skinnydip_distance']) %}
+    {% set DIP_INSERTION_SPEED = params.DIP_INSERTION_SPEED|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['dip_insertion_speed']) %}
+    {% set DIP_EXTRACTION_SPEED = params.DIP_EXTRACTION_SPEED|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['dip_extraction_speed']) %}
+    {% set MELT_ZONE_PAUSE = params.MELT_ZONE_PAUSE|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['melt_zone_pause']) %}
+    {% set COOLING_ZONE_PAUSE = params.COOLING_ZONE_PAUSE|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['cooling_zone_pause']) %}
+    {% set FINAL_EJECT = params.FINAL_EJECT|default(printer['gcode_macro _ERCF_FORM_TIP_STANDALONE']['final_eject'], True) %}
+
+    G91
+    G92 E0
+    
+    #---------------------------------#
+    #-尖端成型过程从这里开始-#
+    #---------------------------------#
+
+    SET_PRESSURE_ADVANCE ADVANCE=0
+    {% set OLD_TEMP = printer.extruder.target %}
+    {% if SS_RAMMING|int == 0 %} # 独立夯实
+        {% set RATIO = (RAMMING_VOLUME|float) /23.0 %}
+        G1 E{0.5784 * RATIO|float} F299 #7
+        G1 E{0.5834 * RATIO|float} F302 #3
+        G1 E{0.5918 * RATIO|float} F306 #6
+        G1 E{0.6169 * RATIO|float} F319 #6
+        G1 E{0.3393 * RATIO|float} F350 #0
+        G1 E{0.3363 * RATIO|float} F350 #0
+        G1 E{0.7577 * RATIO|float} F392 #6
+        G1 E{0.8382 * RATIO|float} F434 #3
+        G1 E{0.7776 * RATIO|float} F469 #9
+        G1 E{0.1293 * RATIO|float} F469 #9
+        G1 E{0.9673 * RATIO|float} F501 #2
+        G1 E{1.0176 * RATIO|float} F527 #2
+        G1 E{0.5956 * RATIO|float} F544 #6
+        G1 E{0.4555 * RATIO|float} F544 #6
+        G1 E{1.0662 * RATIO|float} F552 #4
+    {% endif %}
+
+    # 在从熔化区提取灯丝之前设置换刀温度，并等待设置点
+    # （仅限SKINYDIP正常模式）
+    # 仅在更换灯丝类型时使用，例如ABS-->PLA
+    {% if TOOLCHANGE_TEMP|float > 0 and USE_FAST_SKINNYDIP|int == 0 %}
+         M109 S{TOOLCHANGE_TEMP}
+    {% endif %}
+
+    # 卸载-这就是尖端矛形的来源更快=更长/指针/更高的架线
+    {% set TOTAL_RETRACTION_DISTANCE = COOLING_TUBE_POSITION|float + COOLING_TUBE_LENGTH|float / 2 - 15 %}
+    G1 E-15 F{1.0 * UNLOADING_SPEED_START|float * 60} # SS的默认值-无法修改
+    G1 E-{0.7 * TOTAL_RETRACTION_DISTANCE} F{1.0 * UNLOADING_SPEED|float * 60}
+    G1 E-{0.2 * TOTAL_RETRACTION_DISTANCE} F{0.5 * UNLOADING_SPEED|float * 60}
+    G1 E-{0.1 * TOTAL_RETRACTION_DISTANCE} F{0.3 * UNLOADING_SPEED|float * 60}
+
+    {% if TOOLCHANGE_TEMP|float > 0 and USE_FAST_SKINNYDIP|int == 1 %}
+        M104 S{TOOLCHANGE_TEMP}
+    {% endif %}
+
+    # 生成冷却动作-固化尖端形状，并有助于在形成字符串时打断字符串
+    {% set SPEED_INC = (FINAL_COOLING_SPEED|float - INITIAL_COOLING_SPEED|float) / (2 * COOLING_MOVES|float - 1) %}
+    {% for move in range(COOLING_MOVES|int) %}
+        G1 E{COOLING_TUBE_LENGTH} F{(INITIAL_COOLING_SPEED|float + SPEED_INC*move*2) * 60}
+        G1 E-{COOLING_TUBE_LENGTH} F{(INITIAL_COOLING_SPEED|float + SPEED_INC*(move*2+1)) * 60}
+    {% endfor %}
+
+    # 冷却完成后，等待挤出机达到换刀温度（仅限SKINYDIP快速模式）
+    {% if TOOLCHANGE_TEMP|float > 0 and USE_FAST_SKINNYDIP|int == 1 %}
+        M109 S{TOOLCHANGE_TEMP}
+    {% endif %}
+
+    # 瘦削动作-烧掉非常细的头发
+    {% if USE_SKINNYDIP|int == 1 %}
+        G1 E{SKINNYDIP_DISTANCE} F{DIP_INSERTION_SPEED|float * 60}
+        G4 P{MELT_ZONE_PAUSE}
+        G1 E-{SKINNYDIP_DISTANCE} F{DIP_EXTRACTION_SPEED|float * 60}
+        G4 P{COOLING_ZONE_PAUSE}
+    {% endif %}
+
+    {% if TOOLCHANGE_TEMP|float > 0 %}
+        M104 S{OLD_TEMP}
+    {% endif %}
+    
+    # 驻车灯丝
+    # ODO:冷却后的停车灯丝/裸泳。确定先前移动到最终停车距离的距离的数学
+  
+    # 完成所有成型后弹出-仅限独立模式
+    {% if FINAL_EJECT|int == 1 %}
+        G92 E0
+        G1 E-80 F3000
+    {% endif %}
+
+    G92 E0
+    G90
+
+###########################################################################
+# 无休止的阀芯处理
+#请注意，EndlessSpool是一种无监督的灯丝变化
+###########################################################################
+[gcode_macro _ERCF_ENDLESS_SPOOL_PRE_UNLOAD]
+description: Pre unload routine for EndlessSpool changes
+gcode:
+    # 这发生在ERCF形成尖端并排出旧细丝的残留物之前
+#通常情况下，您会将刀头移动到停车位置，因此渗出不是问题
+#这可能与您在PAUSE宏中所做的操作类似，您可以在此处简单地称之为。。。
+#（此调用与client_macros.cfg中提供的参考PAUSE宏一起使用）
+    PAUSE
+
+[gcode_macro _ERCF_ENDLESS_SPOOL_POST_LOAD]
+description: Optional post load routine for EndlessSpool changes
+gcode:
+    # 这发生在ERCF从下一个旋转线轴加载新灯丝之后
+#ERCF将以与普通灯丝相同的方式将新灯丝加载到喷嘴
+#交换。先前配置的压力前进将被保留。
+#如果必要的话，这将是一个吹扫额外灯丝的地方（实际上不应该）
+#如果您的打印机配备合适，请清洁喷嘴。
+#这可能与您在RESUME宏中所做的类似，您可以在这里简单地调用它。。。
+#（此调用与client_macros.cfg中提供的参考RESUME宏一起使用）
+
+    RESUME

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-06 23:09:34
+ * @LastEditTime: 2023-07-09 13:13:43
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -27,3 +27,4 @@
 ###   2023-07-02 更新被动回卷料架V2. ,更新冷冷哒全套TR兔_MOD 1.4 ,新增小米空气净化器MOD-群友上传不做解释
 ###   2023-07-05 更新快乐兔配置文件（中文注释而已）， 更新基础屏幕教程，近期陆续更新快乐兔屏幕教程（更新中—）
 ###   2023-07-06 更新TR编码器-切刀-电动回卷-大C，新增20L被动回卷料架-葉
+###   2023-07-09 新增20L被动回卷料架-吾，待定  更新大料盘适配

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-09 13:13:43
+ * @LastEditTime: 2023-07-14 22:23:51
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -31,4 +31,4 @@
 ###   2023-07-09 新增20L被动回卷料架-唔，待定  更新大料盘适配
 ###   2023-07-10 更新TR编码器-切刀-电动回卷-大C-V3
 ###   2023-07-11 更新大佬动态网床初步测试中  
-###   2023-07-14 更新20L被动回卷料架-V1-唔
+###   2023-07-14 更新20L被动回卷料架-V1-唔，待定，更新TR编码器-切刀-电动回卷-大C-V4

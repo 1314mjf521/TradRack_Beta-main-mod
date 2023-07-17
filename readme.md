@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-14 22:23:51
+ * @LastEditTime: 2023-07-18 00:11:41
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -37,4 +37,4 @@
 ###   2023-07-11 更新大佬动态网床初步测试中  
 ###   2023-07-14 更新20L被动回卷料架-V1-唔，待定，更新TR编码器-切刀-电动回卷-大C-V4  
 ###   2023-07-16 更新xiao主控配置文件中文注释进可以用来看中文注释不建议全抄，由于切刀问题个别参数不适合所有人  
-###   2023-07-17 更新梦梦整理初版安装手册-V3持续更新中我懒别催
+###   2023-07-17 更新梦梦整理初版安装手册-V3持续更新中我懒别催,更新TR固定文件-政政的回忆录  

@@ -20,7 +20,7 @@
 
 [动态网床使用-耗爹油](https://github.com/eamars/klipper_adaptive_bed_mesh)  
 [动态网床使用-耗爹油-国内加速衔接](https://gitee.com/mjf521/klipper_adaptive_bed_mesh.git)  
-[兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)
+[兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)  
 [兔子垂直料架开源-耗爹油-国内加速衔接](https://gitee.com/mjf521/VoronPrinterMods.git)
 
 

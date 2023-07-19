@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-18 21:30:21
+ * @LastEditTime: 2023-07-19 19:53:00
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
@@ -22,6 +22,8 @@
 [动态网床使用-耗爹油-国内加速衔接](https://gitee.com/mjf521/klipper_adaptive_bed_mesh.git)  
 [兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)  
 [兔子垂直料架开源-耗爹油-国内加速衔接](https://gitee.com/mjf521/VoronPrinterMods.git)
+[四色换色开源-唔，待定](https://github.com/feiwtyro/FEIW-multi_color)
+[四色换色开源-唔，待定-国内加速衔接](https://gitee.com/mjf521/FEIW-multi_color)
 
 
 ## 更新记录
@@ -43,3 +45,4 @@
 ###   2023-07-16 更新xiao主控配置文件中文注释进可以用来看中文注释不建议全抄，由于切刀问题个别参数不适合所有人  
 ###   2023-07-17 更新梦梦整理初版安装手册-V3持续更新中我懒别催,更新TR固定文件-政政的回忆录  
 ###   2023-07-18 更新ERCF-兔子垂直料架-耗爹油  
+###   2023-07-19 新增4色开源项目-唔，待定  

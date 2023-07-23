@@ -1,10 +1,10 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-19 19:53:00
+ * @LastEditTime: 2023-07-23 23:33:02
  * @LastEditors: Win_VScode
  * @Description: 
- * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\MOD\readme.md
+ * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
  * 版权声明暂无
 -->
 # 以上MOD文件仅为测试使用用途，不得进行商用，不得进行商用，同时文件为开放式下载可进行转发及Fork但是不得商用售卖，一经发现拉黑，通告处理，源文件作者保留相关知识产权及法律诉讼通道，将提供文件归属权及开放时间证明！
@@ -46,4 +46,4 @@
 ###   2023-07-17 更新梦梦整理初版安装手册-V3持续更新中我懒别催,更新TR固定文件-政政的回忆录  
 ###   2023-07-18 更新ERCF-兔子垂直料架-耗爹油  
 ###   2023-07-19 新增4色开源项目-唔，待定，根据更新频率将文件压缩已完成，已完成文件向gitee得迁移加速    
-###   2023-07-23 更新大C文件，同时更新安装文档（V5版本持续更新中） 
+###   2023-07-23 更新大C文件，同时更新安装文档（V5版本持续更新中） ，更新20L被动回卷料架-V3  

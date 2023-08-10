@@ -1,5 +1,14 @@
+<!--
+ * @Author: Mjf
+ * @Date: 2023-07-19 20:39:04
+ * @LastEditTime: 2023-08-11 00:10:12
+ * @LastEditors: Win_VScode
+ * @Description: 
+ * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\切刀-快乐兔配置参考\readme.md
+ * 版权声明暂无
+-->
 
-1、修改V1快乐兔py文件2523行，V2快乐兔3326行，添加或是删除切刀代码 （锁定关键代码：def _form_tip_standalone）  
+1、修改V1快乐兔py文件2523行，V2快乐兔3310行，添加或是删除切刀代码 （锁定关键代码：def _form_tip_standalone）  
     self.gcode.run_script_from_command("FILAMENT_CUTTING")  
 2、修改兔子配置文件parking_distance值大小（新版本已更改无需手动改）  
     parking_distance: 43.0		# 控制灯丝停放到栅极垫圈的距离（与编码器的距离，范围=12-30）  

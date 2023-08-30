@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-07-19 20:39:04
- * @LastEditTime: 2023-08-30 23:52:44
+ * @LastEditTime: 2023-08-30 23:55:50
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\切刀-快乐兔配置参考\readme.md
@@ -24,7 +24,7 @@ mmu_software.cfg 文件的[gcode_macro _MMU_UNLOAD_SEQUENCE]宏代码下面添�
     **parking_distance: 43.0**  # 控制灯丝停放到栅极垫圈的距离（与编码器的距离，范围=12-30）<br/>
 3、快乐兔升级注意<br/>
 &emsp;新版快乐兔增加了电机同步py，使用升级时需要将新文件拷贝指<br/>
-&emsp;&emsp;&emsp;/home/用户名/klipper/klippy/extras
+&emsp;&emsp;&emsp;/home/用户名/klipper/klippy/extras<br/>
 &emsp;软衔接制作<br/>
 &emsp;&emsp;**ln -s /home/用户名/ERCF-Software-V3/extras/manual_extruder_stepper.py /home/用户名/klipper/klippy/extras/manual_extruder_stepper.py**<br/>
 4、快乐兔V3版本的挤出电机改名了！需要注意<br/>

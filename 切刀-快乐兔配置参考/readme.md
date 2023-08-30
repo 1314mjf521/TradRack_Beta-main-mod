@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-07-19 20:39:04
- * @LastEditTime: 2023-08-11 00:10:12
+ * @LastEditTime: 2023-08-30 23:01:24
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\切刀-快乐兔配置参考\readme.md
@@ -10,10 +10,15 @@
 
 1、修改V1快乐兔py文件2523行，添加或是删除切刀代码 （锁定关键代码：def _form_tip_standalone）  
     self.gcode.run_script_from_command("FILAMENT_CUTTING") 
-   v2快乐兔修改方式，由于代码结构问题，V2将退料代码移至宏文件中所以本次修改位置厨上面的拔尖处外（归位使用）增加宏代码位置  
+    **V2快乐兔测试方案不一定成功待验证其中V1方案确认可行，V2待验证**  
+    v2快乐兔修改方式1，由于代码结构问题，V2将退料代码移至宏文件中所以本次修改位置厨上面的拔尖处外（归位使用）增加宏代码位置  
     mmu_software.cfg 文件的[gcode_macro _MMU_UNLOAD_SEQUENCE]宏代码下面添加切刀配置  
     例如：FILAMENT_CUTTING（切刀命令）  
-    同时建议修改 mmu_parameters.cfg 中toolhead_extruder_to_nozzle与 toolhead_sensor_to_nozzle 来完成对拔尖代码后的切刀文件的适配具体配比自行分析建议  
+    V2方法2依然查询_form_tip_standalone 这个代码，然后在"current_action = self._set_action(self.ACTION_FORMING_TIP)"这个代码上面添加切刀代码  
+    self.gcode.run_script_from_command("FILAMENT_CUTTING")   
+    修改：mmu_parameters.cfg中打开始终形成对立尖端force_form_tip_standalone: 1    
+    同时建议修改toolhead_extruder_to_nozzle与 toolhead_sensor_to_nozzle 来完成对拔尖代码后的切刀文件的适配具体配比自行分析建议   
+    
 
 2、修改兔子配置文件parking_distance值大小（新版本已更改无需手动改）  
     parking_distance: 43.0		# 控制灯丝停放到栅极垫圈的距离（与编码器的距离，范围=12-30）  

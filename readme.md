@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-07-23 23:33:02
+ * @LastEditTime: 2023-08-31 18:30:04
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -52,3 +52,4 @@
 ###   2023-08-08 没事更新下檫料方案群友上传  ，更新V2快乐兔配置  
 ###   2023-08-17 更新大佬的FLY兔子板IO扩展板打板文件，更新木子小阳缓冲器（解决挤出不同步使用）  
 ###   2023-08-30 更新大C-6.3升电动回卷料架    
+###   2023-08-31 更新V8安装说明只是更改一些错误</p>

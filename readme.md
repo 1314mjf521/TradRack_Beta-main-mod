@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-08-31 18:30:04
+ * @LastEditTime: 2023-10-02 21:32:50
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -57,3 +57,4 @@
 ###   2023-09-24 更新RP2040-zero开源主板新增热敏及7.2V电源输出接口（不要问为啥）</p>
 ###   2023-09-24 更新5.8L被动回卷料架</p>
 ###   2023-09-29 更新RP2040-zero开源主板，更新大佬龙头切刀</p>
+###   2023-10-02 大C切刀文件更新阀门，RP2040主板全引脚引出添加7.2V及热敏接口，抛弃电动回卷及风扇接口</p>

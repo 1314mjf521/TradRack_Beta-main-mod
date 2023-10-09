@@ -1,13 +1,13 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-09-24 23:14:50
+ * @LastEditTime: 2023-10-09 19:22:00
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
  * 版权声明暂无
 -->
-### 梦梦专属兔子板V1.2
+### 梦梦专属兔子板V1.3
 **原版xiao已做验证可正常使用，RP2040主板未验证不建议打**  
 
 算了我补下零件清单吧
@@ -44,3 +44,4 @@
 > 我也没验证没办法穷没打板卷了   
 ##  2023-09-24 RP2040-zero更新新增7.2V及热敏电阻位置不要问为啥因为我还没验证  
 ##  2023-09-29 RP2040-zero-V1.3原版存在UART无法使用，风扇电路短路问题，修改文件更改UART模式  
+##  2023-10-09 RP2040-zero-V1.3修改封装类型，增加全引脚主板测试中   

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-10-09 19:22:00
+ * @LastEditTime: 2023-10-09 20:34:49
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
@@ -44,4 +44,4 @@
 > 我也没验证没办法穷没打板卷了   
 ##  2023-09-24 RP2040-zero更新新增7.2V及热敏电阻位置不要问为啥因为我还没验证  
 ##  2023-09-29 RP2040-zero-V1.3原版存在UART无法使用，风扇电路短路问题，修改文件更改UART模式  
-##  2023-10-09 RP2040-zero-V1.3修改封装类型，增加全引脚主板测试中   
+##  2023-10-09 RP2040-zero-V1.3修改封装类型，增加全引脚主板测试中,增加USB供电电路方便can使用     

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-10-17 09:03:06
+ * @LastEditTime: 2023-10-17 20:48:13
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -60,4 +60,4 @@
 ###   2023-10-02 大C切刀文件更新阀门，RP2040主板全引脚引出添加7.2V及热敏接口，抛弃电动回卷及风扇接口</p>
 ###   2023-10-09 RP2040主板全引脚引出添加7.2V及热敏接口，抛弃电动回卷及风扇接口，增加全引脚主板测试中,微调can电路完成can引脚使用</p>
 ###   2023-10-14 RP2040主板引脚及电路测试完成，虽然无法共享UART引脚但是谁让2040引脚多呢随便玩，开源自行下载</p>
-###   2023-10-14 RP2040主板新增全贴片方案，GPIO引脚丝印整理中  
+###   2023-10-17 RP2040主板新增全贴片方案，GPIO引脚丝印完善</p>

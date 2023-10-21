@@ -1,0 +1,42 @@
+## Happy Hare MMU hardware config file with config for EASY-BRD
+
+[mcu mmu]
+#serial: /dev/serial/by-id/usb-Klipper_samd21g18a_D72E79B54134555020312E30422617FF-if00
+# RP 2040
+serial: /dev/serial/by-id/usb-Klipper_rp2040_E6625887D37B4E2C-if00
+# Section to create alias for pins used by MMU for easier integration into Klippain and RatOS.
+# The names match those referenced in the mmu_hardware.cfg file. If you get into difficulty
+# you can also comment these alisas and configure the pin names directly into mmu_hardware.cfg.
+#
+[board_pins mmu]
+mcu: mmu # Assuming using an external / extra mcu dedicated to MMU
+aliases:
+    MMU_GEAR_UART=gpio8,
+    MMU_GEAR_STEP=gpio5,
+    MMU_GEAR_DIR=gpio4,
+    MMU_GEAR_ENABLE=gpio6,
+    MMU_GEAR_DIAG=,
+    MMU_SEL_UART=gpio11,
+    MMU_SEL_STEP=gpio1,
+    MMU_SEL_DIR=gpio0,
+    MMU_SEL_ENABLE=gpio2,
+    MMU_SEL_DIAG=,
+    MMU_SEL_ENDSTOP=gpio3,
+    MMU_SERVO1=gpio14,
+    MMU_ENCODER=gpio7,
+    MMU_SERVO2=gpio15
+  
+
+#eztb
+# Assuming the rest of the pins are on main mcu. You may need to comment out this section
+# if using Klippain or RatOS and already have the aliases defined
+#
+[board_pins eztb]
+aliases:
+    E_TMCUART=PA10,
+    E_DIAG=PA1,
+    E_STEP=PA3,
+    E_DIR=PB15,
+    E_ENABLE=PB10,
+    TOOLHEAD_SENSOR=PB3
+

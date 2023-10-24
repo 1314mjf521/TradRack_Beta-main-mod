@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-10-09 20:34:49
+ * @LastEditTime: 2023-10-24 14:53:32
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
@@ -40,6 +40,10 @@
     SERVER2 PA5  
     ENCODER PB9  
     ENDSTOP PA7  
+# xiao-兔子板丝印:
+xiao双舵机板丝印
+![丝印](./img/兔子板丝印及引脚图.png)
+
 
 # *RP204主板引脚待验证-验证完成* 
 # 所有UART引脚位置100R电阻不可缺少，但是可以更换为其他阻值，但是不建议更改  

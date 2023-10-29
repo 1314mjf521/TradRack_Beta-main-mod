@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-10-28 17:37:22
+ * @LastEditTime: 2023-10-29 22:18:33
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -64,3 +64,4 @@
 ###   2023-10-21 更新下快乐兔V2配置文件，自行根据所选主板完成配置及可建议只抄引脚剩下的自己慢慢对，已经帮你翻译过了</p>
 ###   2023-10-22 更新大佬被动回卷-木子小阳</p>
 ###   2023-10-28 更新TR升级兔子通道文件-☜♥☞鹏仔☜♥☞</p>
+###   2023-10-29 tinysb切刀-适配N20切刀-数位星河</p>

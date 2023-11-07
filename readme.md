@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-10-29 22:18:33
+ * @LastEditTime: 2023-11-07 21:15:04
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -65,3 +65,4 @@
 ###   2023-10-22 更新大佬被动回卷-木子小阳</p>
 ###   2023-10-28 更新TR升级兔子通道文件-☜♥☞鹏仔☜♥☞</p>
 ###   2023-10-29 tinysb切刀-适配N20切刀-数位星河</p>
+###   2023-11-01 更新最新快乐兔配置文件，直客借阅不可照抄</p>

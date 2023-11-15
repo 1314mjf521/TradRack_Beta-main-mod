@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-11-07 21:15:04
+ * @LastEditTime: 2023-11-15 23:35:42
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -67,3 +67,4 @@
 ###   2023-10-29 tinysb切刀-适配N20切刀-数位星河</p>
 ###   2023-11-01 更新最新快乐兔配置文件，直客借阅不可照抄</p>
 ###   2023-11-10 更新大C电动回卷方案，计划更新V27套件包及快乐兔V2调试教程中文翻译</p>
+###   2023-11-15 更新兔板引脚，同时完善前期问题更新1.5测试板及1.5.1测试板，更新V9版教程</p>

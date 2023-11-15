@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-10-24 14:53:32
+ * @LastEditTime: 2023-11-15 23:29:04
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
@@ -45,9 +45,91 @@ xiao双舵机板丝印
 ![丝印](./img/兔子板丝印及引脚图.png)
 
 
+
 # *RP204主板引脚待验证-验证完成* 
 # 所有UART引脚位置100R电阻不可缺少，但是可以更换为其他阻值，但是不建议更改  
-我懒所以不在单独写文件了具体看图片  
+**RP2040-V1.2引脚(改线后)（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）**
+>S-DIR gpio0  
+S-STEP gpio1  
+S-EN gpio2  
+S-EndStop gpio3  
+G-DIR gpio4  
+G-STEP gpio5  
+G-EN gpio6  
+G-EndStop gpio7  
+UART gpio8 （sele 寻址用0 GEAR寻址用1 ）    
+Fan1  gpio27  
+Fan2 gpio26  
+Rewinding1  gpio9（未改线为gpio29）  
+Rewinding2 gpio28  
+Temp gpio29（未改线为gpio9无法使用）  
+Servo1  gpio14  
+Servo2  gpio15  
+CAN引脚定义  
+RX gpio13  
+TX gpio12  
+
+
+**RP2040-V1.3全引脚（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）** 
+>S-DIR gpio0  
+S-STEP gpio1  
+S-EN gpio2  
+S-EndStop gpio3  
+G-DIR gpio4  
+G-STEP gpio5  
+G-EN gpio6  
+G-EndStop gpio7  
+UART gpio8 （sele 寻址用0 GEAR寻址用1 ）    
+Temp gpio29（未改线为gpio9无法使用）  
+Servo1  gpio14  
+Servo2  gpio15  
+CAN引脚定义  
+RX gpio13  
+TX gpio12  
+ 
+
+**RP2040-V1.4全贴片**
+>S-DIR gpio0  
+S-STEP gpio1  
+S-EN gpio2  
+S-EndStop gpio3  
+S-UART gpio8  
+G-DIR gpio4  
+G-STEP gpio5  
+G-EN gpio6  
+G-EndStop gpio7  
+G-UART gpio10  
+Fan1  gpio27  
+Fan2 gpio26  
+Rewinding1  gpio29  
+Rewinding2 gpio28  
+Temp 未改线为gpio9无法使用）  
+Servo1  gpio14  
+Servo2  gpio15  
+CAN引脚定义  
+RX gpio13  
+TX gpio12  
+
+**RP2040-V1.5全引脚（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）**
+>S-DIR gpio0  
+S-STEP gpio1  
+S-EN gpio2  
+S-EndStop gpio3  
+S-UART gpio8  
+G-DIR gpio4  
+G-STEP gpio5  
+G-EN gpio6  
+G-EndStop gpio7  
+G-UART gpio9  
+~~UART gpio8 （sele 寻址用0 GEAR寻址用1 ）~~  
+Temp gpio29（未改线为gpio9无法使用）  
+Servo1  gpio14  
+Servo2  gpio15  
+CAN引脚定义  
+RX gpio13  
+TX gpio12    
+
+  
 RP2040双舵机加can引脚图  
 ![RP2040引脚图.png](./img/RP2040_全引脚引出_引脚图.png)  
 RP2040双舵机加can正面  
@@ -63,7 +145,12 @@ RP2040双舵机加can引脚图全引脚引出背面
 
 ##  2023-09-24 RP2040-zero更新新增7.2V及热敏电阻位置不要问为啥因为我还没验证  
 ##  2023-09-29 RP2040-zero-V1.3原版存在UART无法使用，风扇电路短路问题，修改文件更改UART模式  
+
 ##  2023-10-09 RP2040-zero-V1.3修改封装类型，增加全引脚主板测试中,增加USB供电电路方便can使用     
 ##  2023-10-14 RP2040-zero-V1.4引脚测试完成开源使用，全文件共享附带焊接辅助,下一步目标拼板    
 ##  2023-10-17 RP2040-zero-V1.4引脚测试完成开源使用，新增全贴片方案，逐步修改丝印完善引脚图中，增加光污效果   
 ##  2023-10-17 RP2040-zero-V1.4纯粹完善丝印  
+##  2023-11-15 RP2040-zero多个版本引脚完善，同时新增V1.5测试板（已知问题热敏位引脚不支持ADC模式，进一步优化进行优化预计发布V1.6版本
+
+
+

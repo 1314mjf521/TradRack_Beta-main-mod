@@ -1,0 +1,26 @@
+[Variables]
+mmu_calibration_0 = 1.0
+mmu_calibration_1 = 1.026981
+mmu_calibration_2 = 1.027543
+mmu_calibration_3 = 1.026138
+mmu_calibration_bowden_length = 934.5
+mmu_calibration_clog_length = 5.2
+mmu_encoder_resolution = 0.674536
+mmu_gear_rotation_distance = 22.213836
+mmu_selector_offsets = [0.0, 17.7, 35.2, 51.2, 68.8, 85.6, 102.4, 119.2, 137.6]
+mmu_state_filament_pos = 8
+mmu_state_gate_selected = 1
+mmu_state_gate_status = [2, 1, 2, 2, 0, 0, 0, 0, 0]
+mmu_state_tool_selected = 1
+mmu_state_tool_to_gate_map = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+mmu_statistics_gate_0 = {'pauses': 1, 'loads': 0, 'load_distance': 8000.555, 'load_delta': -24.4, 'unloads': 0, 'unload_distance': 5268.3, 'unload_delta': 268.639, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 1, 'quality': 1.020196802660743}
+mmu_statistics_gate_1 = {'pauses': 3, 'loads': 0, 'load_distance': 8023.656, 'load_delta': 87.065, 'unloads': 0, 'unload_distance': 4396.7, 'unload_delta': 101.255, 'servo_retries': 9, 'load_failures': 9, 'unload_failures': 0, 'quality': 0.9987427194233627}
+mmu_statistics_gate_2 = {'pauses': 0, 'loads': 0, 'load_distance': 5378.248, 'load_delta': 39.972, 'unloads': 0, 'unload_distance': 3538.0, 'unload_delta': 171.39, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 0, 'quality': 1.0064568809149148}
+mmu_statistics_gate_3 = {'pauses': 4, 'loads': 0, 'load_distance': 6254.655, 'load_delta': -13.133, 'unloads': 0, 'unload_distance': 3525.1, 'unload_delta': 103.853, 'servo_retries': 2, 'load_failures': 2, 'unload_failures': 1, 'quality': 1.0113941554167325}
+mmu_statistics_gate_4 = {'pauses': 0, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 0.0, 'unload_delta': 0.0, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 0, 'quality': -1.0}
+mmu_statistics_gate_5 = {'pauses': 0, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 0.0, 'unload_delta': 0.0, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 0, 'quality': -1.0}
+mmu_statistics_gate_6 = {'pauses': 0, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 0.0, 'unload_delta': 0.0, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 0, 'quality': -1.0}
+mmu_statistics_gate_7 = {'pauses': 0, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 0.0, 'unload_delta': 0.0, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 0, 'quality': -1.0}
+mmu_statistics_gate_8 = {'pauses': 2, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 4396.7, 'unload_delta': 137.005, 'servo_retries': 0, 'load_failures': 0, 'unload_failures': 2, 'quality': 1.0361462816020282}
+mmu_statistics_swaps = {'total_swaps': 31, 'time_spent_loading': 887.01, 'time_spent_unloading': 757.69, 'total_pauses': 10, 'time_spent_paused': 903.84}
+

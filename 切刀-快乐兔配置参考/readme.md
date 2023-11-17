@@ -19,8 +19,8 @@
 &emsp;软衔接制作<br/>
 &emsp;&emsp;**ln -s /home/用户名/ERCF-Software-V3/extras/manual_extruder_stepper.py /home/用户名/klipper/klippy/extras/manual_extruder_stepper.py**<br/>
 4、快乐兔V3版本的挤出电机改名了！需要注意  
-5、新增xiao配置中文注释翻译，由于自用切刀文件不可抄配置，参考中文注释即可 
-6、~~针对新版快乐兔V2代码，print.cfg中挤出机中TMC配置全部删除剪切至快乐兔文件夹~~
+5、新增xiao配置中文注释翻译，由于自用切刀文件不可抄配置，参考中文注释即可   
+6、~~针对新版快乐兔V2代码，print.cfg中挤出机中TMC配置全部删除剪切至快乐兔文件夹~~  
 7、快乐兔V2全新方式完成安装后，针对切刀代码放置于  
 >**/config/mmu/base/mmu_software.cfg** 
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-11-15 23:35:42
+ * @LastEditTime: 2023-12-16 18:42:51
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -70,3 +70,4 @@
 ###   2023-11-15 更新兔板引脚，同时完善前期问题更新1.5测试板及1.5.1测试板，更新V9版教程</p>
 ###   2023-12-02 更新大C光栅编码器，增加TR/TR兔安装文件</p>
 ###   2023-12-10 更新大C光栅编码器，更新数位星河-tinysb切刀</p>
+###   2023-12-16 更新1.5.2打板文件外壳文件</p>

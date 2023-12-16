@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-11-15 23:29:04
+ * @LastEditTime: 2023-12-16 18:41:37
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
@@ -152,5 +152,5 @@ RP2040双舵机加can引脚图全引脚引出背面
 ##  2023-10-17 RP2040-zero-V1.4纯粹完善丝印  
 ##  2023-11-15 RP2040-zero多个版本引脚完善，同时新增V1.5测试板（已知问题热敏位引脚不支持ADC模式，进一步优化进行优化预计发布V1.6版本  
 ##  2023-11-15 RP2040-zero多个版本引脚完善，同时新增V1.2合宙测试板
-
+##  2023-11-16 RP2040-zero1.5.2更新外壳文件  
 

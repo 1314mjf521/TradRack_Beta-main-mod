@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-12-16 18:42:51
+ * @LastEditTime: 2023-12-23 23:04:13
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -16,8 +16,9 @@
 
 全套MOD不负责进行解释，搜集整理不会用别问我都是群友的自己去兔子群下载，高速下载衔接懒得放心情好了我在放！  
 注意！！  
-    在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M以下文件，所以进行打包！
+    在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M以下文件，所以进行打包！、
 
+[TR公测地址](https://github.com/Annex-Engineering/TradRack)
 [动态网床使用-耗爹油](https://github.com/eamars/klipper_adaptive_bed_mesh)  
 [动态网床使用-耗爹油-国内加速衔接](https://gitee.com/mjf521/klipper_adaptive_bed_mesh.git)  
 [兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)  
@@ -71,3 +72,4 @@
 ###   2023-12-02 更新大C光栅编码器，增加TR/TR兔安装文件</p>
 ###   2023-12-10 更新大C光栅编码器，更新数位星河-tinysb切刀</p>
 ###   2023-12-16 更新1.5.2打板文件外壳文件</p>
+###   2023-12-23 更新TR中文文件下载地址,作者已开放公测，文件开始正常下载，中文文件下载地址位于安装手册中自行寻找</p>

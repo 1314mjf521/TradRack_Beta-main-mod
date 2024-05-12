@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-09-16 18:54:57
- * @LastEditTime: 2023-12-16 18:41:37
+ * @LastEditTime: 2024-05-12 13:33:59
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\兔子板可打板\readme.md
@@ -46,8 +46,8 @@ xiao双舵机板丝印
 
 
 
-# *RP204主板引脚待验证-验证完成* 
-# 所有UART引脚位置100R电阻不可缺少，但是可以更换为其他阻值，但是不建议更改  
+
+# 所有UART引脚位置100R电阻可直接连接焊锡，也可以更换为其他阻值，但是不建议更改  
 **RP2040-V1.2引脚(改线后)（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）**
 >S-DIR gpio0  
 S-STEP gpio1  
@@ -88,7 +88,7 @@ RX gpio13
 TX gpio12  
  
 
-**RP2040-V1.4全贴片**
+**RP2040-V1.4.2全贴片**
 >S-DIR gpio0  
 S-STEP gpio1  
 S-EN gpio2  
@@ -101,28 +101,28 @@ G-EndStop gpio7
 G-UART gpio10  
 Fan1  gpio27  
 Fan2 gpio26  
-Rewinding1  gpio29  
+Rewinding1  gpio9  
 Rewinding2 gpio28  
-Temp 未改线为gpio9无法使用）  
+Temp gpio29    
 Servo1  gpio14  
 Servo2  gpio15  
 CAN引脚定义  
 RX gpio13  
 TX gpio12  
 
-**RP2040-V1.5.2引脚（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）**
+**RP2040-V1.5.2/1.6.2引脚（使用UART引脚复用需给SELTETE驱动MS1短接3.3V电压）**
 >S-DIR gpio0  
 S-STEP gpio1  
 S-EN gpio2  
 S-EndStop gpio3  
-S-UART gpio8  
+~~S-UART gpio8  0  ~~
 G-DIR gpio4  
 G-STEP gpio5  
 G-EN gpio6  
 G-EndStop gpio7  
-G-UART gpio9  
-~~UART gpio8 （sele 寻址用0 GEAR寻址用1 ）~~  
-Temp gpio29（未改线为gpio9无法使用）  
+~~G-UART gpio8 1~~   
+UART gpio8 （sele 寻址用0 GEAR寻址用1 ） 
+Temp gpio29  
 Servo1  gpio14  
 Servo2  gpio15  
 CAN引脚定义  
@@ -142,6 +142,17 @@ RP2040双舵机加can引脚图全引脚引出正面
 ![RP2040_全引脚引出_引脚图正面.png](./img/RP2040_全引脚_3D图正面.png) 
 RP2040双舵机加can引脚图全引脚引出背面  
 ![RP2040_全引脚引出_引脚图背面.png](./img/RP2040_全引脚_3D图背面.png) 
+RP2040贴片双舵机加can引脚图  
+![全贴片引脚图.png](./img/全贴片引脚图.png) 
+
+# 1.6.2主板全图  
+![1.6.2正面.png](./img/1.6.2正面.png)  
+![1.6.2背面.png](./img/1.6.2背面.png)   
+# 贴片主板全图  
+![全贴片正面.png](./img/全贴片正面.png)  
+![全贴片背面.png](./img/全贴片背面.png) 
+
+
 
 ##  2023-09-24 RP2040-zero更新新增7.2V及热敏电阻位置不要问为啥因为我还没验证  
 ##  2023-09-29 RP2040-zero-V1.3原版存在UART无法使用，风扇电路短路问题，修改文件更改UART模式  
@@ -153,4 +164,4 @@ RP2040双舵机加can引脚图全引脚引出背面
 ##  2023-11-15 RP2040-zero多个版本引脚完善，同时新增V1.5测试板（已知问题热敏位引脚不支持ADC模式，进一步优化进行优化预计发布V1.6版本  
 ##  2023-11-15 RP2040-zero多个版本引脚完善，同时新增V1.2合宙测试板
 ##  2023-11-16 RP2040-zero1.5.2更新外壳文件  
-
+##  2024-05-12 RP2040-zero 1.6.2 版本更新，同时增加新版全贴片主板   

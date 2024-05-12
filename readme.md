@@ -1,7 +1,7 @@
 <!--
  * @Author: Mjf
  * @Date: 2023-06-24 20:04:52
- * @LastEditTime: 2023-12-23 23:04:13
+ * @LastEditTime: 2024-05-12 15:53:49
  * @LastEditors: Win_VScode
  * @Description: 
  * @FilePath: \undefinedf:\download\TradRack_Beta-main\STLs\TradRack_Beta-main-mod\TradRack_Beta-main-mod\readme.md
@@ -19,22 +19,18 @@
     在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M以下文件，所以进行打包！、
 
 [TR公测地址](https://github.com/Annex-Engineering/TradRack)
+[TR开源衔接-国内加速](https://gitee.com/mjf521/TradRack) 
 [动态网床使用-耗爹油](https://github.com/eamars/klipper_adaptive_bed_mesh)  
 [动态网床使用-耗爹油-国内加速衔接](https://gitee.com/mjf521/klipper_adaptive_bed_mesh.git)  
 [兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)  
 [兔子垂直料架开源-耗爹油-国内加速衔接](https://gitee.com/mjf521/VoronPrinterMods.git)  
 [四色换色开源-唔，待定](https://github.com/feiwtyro/FEIW-multi_color)  
 [四色换色开源-唔，待定-国内加速衔接](https://gitee.com/mjf521/FEIW-multi_color)  
-
-
 ## 更新记录
-
 ###   2023-06-24 项目初步上传进行更新整理  
 ###   2023-06-25 更新自动回卷料架添加D轴支持  
 ###   2023-06-28 新增5.8L米桶支持，更新全套TR兔MOD，更新V3版6.3L米桶文件  
-
 ###   2023-06-29 大C套件更新，V5版电动回卷+V1版切刀+编码器等 
-
 ###   2023-07-01 更新被动回卷料架V2.0 更新全套MODV1.2  
 ###   2023-07-02 更新被动回卷料架V2. ,更新冷冷哒全套TR兔_MOD 1.4 ,新增小米空气净化器MOD-群友上传不做解释
 ###   2023-07-05 更新快乐兔配置文件（中文注释而已）， 更新基础屏幕教程，近期陆续更新快乐兔屏幕教程（更新中—）

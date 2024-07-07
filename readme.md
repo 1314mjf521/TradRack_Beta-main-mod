@@ -18,8 +18,8 @@
 注意！！  
     在个别MOD文件中会有多个压缩文件，由于文件大小限制必须使用100M以下文件，所以进行打包！、
 
-[TR公测地址](https://github.com/Annex-Engineering/TradRack)
-[TR开源衔接-国内加速](https://gitee.com/mjf521/TradRack) 
+[TR公测地址](https://github.com/Annex-Engineering/TradRack)  
+[TR开源衔接-国内加速](https://gitee.com/mjf521/TradRack)  
 [动态网床使用-耗爹油](https://github.com/eamars/klipper_adaptive_bed_mesh)  
 [动态网床使用-耗爹油-国内加速衔接](https://gitee.com/mjf521/klipper_adaptive_bed_mesh.git)  
 [兔子垂直料架开源-耗爹油](https://github.com/eamars/VoronPrinterMods/tree/main/ercf_vertical_extrusion_stand)  
@@ -73,3 +73,4 @@
 ###   2024-05-11 日常更新TR-MOD，文件较多不再具体描述，更新兔子板1.6.2文件</p>
 ###   2024-05-12 更新兔子板贴片问文件同时更新相关介绍及引脚</p>
 ###   2024-05-29 更新断头V6切刀文件，无需截断刀片，4号刀片直接使用</p>
+###   2024-07-07 更新兔子版文件，更新TR-Blink打印件（P站下载）</p>

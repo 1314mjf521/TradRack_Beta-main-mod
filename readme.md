@@ -30,6 +30,7 @@
 [龙头切刀](https://github.com/sorted01/Filametrix)  
 [Voron2.4 换头-多头](https://github.com/viesturz/tapchanger)  
 [双头 Voron2.4](https://github.com/FrankenVoron/Tridex)  
+[木子小阳多色](https://github.com/muzixiaoyang/MZ-AMS-LITE-split-multi-color-3Dprint)  
 
 ## 更新记录
 ###   2023-06-24 项目初步上传进行更新整理  

@@ -31,7 +31,8 @@
 [Voron2.4 换头-多头](https://github.com/viesturz/tapchanger)  
 [双头 Voron2.4](https://github.com/FrankenVoron/Tridex)  
 [木子小阳多色](https://github.com/muzixiaoyang/MZ-AMS-LITE-split-multi-color-3Dprint)  
-
+[klipper_MMS](https://github.com/kingxuxu/AFC-Klipper-Add-On/tree/main)  
+[BoxTurtle ](https://github.com/ArmoredTurtle/BoxTurtle)
 ## 更新记录
 ###   2023-06-24 项目初步上传进行更新整理  
 ###   2023-06-25 更新自动回卷料架添加D轴支持  
@@ -81,3 +82,4 @@
 ###   2024-05-29 更新断头V6切刀文件，无需截断刀片，4号刀片直接使用</p>
 ###   2024-07-07 更新兔子版文件，更新TR-Blink打印件（P站下载）</p>
 ###   2024-10-06 更新兔子屏幕汉化包，优化相关BUG，更新大C 3.1版本切刀，Voron2.4龙门擦嘴滑梯-胖松鼠</p>
+###   2024-10-26 更新全新Klipper_MMS(klipper_ams)开源软件地址,BoxTurtle地址</p>

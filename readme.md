@@ -33,6 +33,7 @@
 [木子小阳多色](https://github.com/muzixiaoyang/MZ-AMS-LITE-split-multi-color-3Dprint)  
 [klipper_MMS](https://github.com/kingxuxu/AFC-Klipper-Add-On/tree/main)  
 [BoxTurtle ](https://github.com/ArmoredTurtle/BoxTurtle)
+[国内玩家福利界面](https://video.majunfei.club/download_FULI.html)
 ## 更新记录
 ###   2023-06-24 项目初步上传进行更新整理  
 ###   2023-06-25 更新自动回卷料架添加D轴支持  
